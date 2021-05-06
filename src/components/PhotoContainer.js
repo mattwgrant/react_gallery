@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Photo from './Photo';
 import NoResults from './NoResults';
 
 class PhotoContainer extends Component {

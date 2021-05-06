@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Dogs = () => {
+const Photo = () => {
 	return (
 
 	);
 }
 
-export default Dogs;
+export default Photo;
