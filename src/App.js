@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import './index.css';
 import './config.js';
@@ -8,22 +8,29 @@ import PhotoContainer from './components/PhotoContainer';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-const App = () => {
-  return (
-    <BrowserRouter>
-    <div className="container">
-      <SearchForm />
-      <Nav />
-      <PhotoContainer />
+class App extends Component {
 
-      <Switch>
-        <Route path="" component={} />
-        <Route path="" component={} />
-        <Route path="" component={} />
-      </Switch>
-    </div>
-    </BrowserRouter>
-  );
+  // state = {
+  //   inputValue: ''
+  // }
+
+  render() {
+    return (
+      <BrowserRouter>
+      <div className="container">
+        <SearchForm />
+        <Nav />
+        <PhotoContainer />
+
+        <Switch>
+          <Route path="/dogs" component={SearchForm} />
+          <Route path="/music" component={Nav} />
+          <Route path="/computers" component={PhotoContainer} />
+        </Switch>
+      </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
