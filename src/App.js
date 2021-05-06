@@ -10,9 +10,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
 
-  // state = {
-  //   inputValue: ''
-  // }
+  state = {
+    photos: []
+  }
 
   render() {
     return (
@@ -20,7 +20,7 @@ class App extends Component {
       <div className="container">
         <SearchForm />
         <Nav />
-        <PhotoContainer />
+        <PhotoContainer photos={this.state.photos}/>
 
         <Switch>
           <Route path="/dogs" component={SearchForm} />
